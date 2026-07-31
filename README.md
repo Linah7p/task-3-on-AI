@@ -268,3 +268,8 @@ Speech Output
 - Text-to-Speech conversion.
 - Continuous conversation loop.
 - Voice command (`exit`) to stop the assistant.
+
+- ## Notes
+
+- The `.env` file is not included in the repository for security reasons.
+- Users must create their own `.env` file and add a valid Cohere API key before running the project.

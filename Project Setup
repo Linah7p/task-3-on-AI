@@ -1,0 +1,87 @@
+Step 1 – Create the Python Project
+
+A new Python project was created using PyCharm with Python 3.11.
+
+Step 2 – Create a Virtual Environment
+
+A virtual environment (.venv) was created to isolate the project dependencies from the global Python installation.
+
+Step 3 – Install Required Libraries and ffmpeg 
+
+The following Python packages were installed:
+
+pip install cohere
+pip install python-dotenv
+pip install RealtimeSTT
+pip install "RealtimeSTT[faster-whisper]"
+pip install RealtimeTTS
+pip install torch
+pip install torchaudio
+Step 4 – Configure the API Key
+
+A .env file was created to securely store the Cohere API key.
+
+Example:
+
+COHERE_API_KEY=YOUR_API_KEY
+
+The API key is loaded into the application using the python-dotenv library.
+
+Step 5 – Implement Speech-to-Text
+
+The RealtimeSTT library was used to capture audio from the microphone and convert the user's speech into text.
+
+recorder = AudioToTextRecorder()
+text = recorder.text()
+Step 6 – Connect to Cohere
+
+The recognized text is sent to the Cohere Large Language Model.
+
+response = co.chat(
+    model="command-a-03-2025",
+    message=text
+)
+
+The model processes the user's question and returns an intelligent response.
+
+Step 7 – Implement Text-to-Speech
+
+The generated response is converted into speech using RealtimeTTS.
+
+engine = SystemEngine()
+stream = TextToAudioStream(engine)
+stream.feed(reply)
+stream.play()
+Step 8 – Run the Application
+
+After running the program:
+
+The assistant waits for the user to speak.
+Speech is converted into text.
+The text is sent to Cohere.
+Cohere generates a response.
+The response is spoken aloud.
+The conversation continues until the user says exit.
+Required Files
+
+The project contains the following files:
+
+PythonProject3/
+│
+├── main.py
+├── .env              (Not uploaded to GitHub)
+├── requirements.txt
+└── README.md
+Running the Project
+
+Install all required packages:
+
+pip install -r requirements.txt
+
+Create a .env file:
+
+COHERE_API_KEY=YOUR_API_KEY
+
+Run the program:
+
+python main.py

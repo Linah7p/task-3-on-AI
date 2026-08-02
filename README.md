@@ -269,6 +269,10 @@ Speech Output
 - Continuous conversation loop.
 - Voice command (`exit`) to stop the assistant.
 
+  the code
+  <img width="900" height="470" alt="image" src="https://github.com/user-attachments/assets/e1fc6594-4afb-4d08-9a28-f3004d3bb8a2" />
+
+
   the Output
 
   <img width="901" height="541" alt="image" src="https://github.com/user-attachments/assets/7ac08b6d-095a-4c6b-9ced-66809d7364a7" />
